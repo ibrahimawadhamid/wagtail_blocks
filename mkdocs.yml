@@ -1,3 +1,9 @@
 site_name: wagtail-blocks
 site_description: A Collection of awesome Wagtail CMS stream-field blocks.
 repo_url: https://github.com/ibrahimawadhamid/wagtail_blocks
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Usage: usage.md
+  - Showcase: showcase.md
