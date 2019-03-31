@@ -8,3 +8,8 @@
 
 ### Image with Text Overlay
 ![ImageTextOverlayBlock](screenshots/ImageTextOverlayBlock-view.PNG)
+
+### Cropped Images with Text
+![CroppedImagesWithTextBlock-use](screenshots/CroppedImagesWithTextBlock-use.PNG)
+
+![CroppedImagesWithTextBlock-view](screenshots/CroppedImagesWithTextBlock-view.PNG)

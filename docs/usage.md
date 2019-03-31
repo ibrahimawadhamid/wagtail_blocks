@@ -1,18 +1,20 @@
 # Usage
 1- Sample usage in wagtail page called "Home":
 ```python
-from wagtail_blocks import blocks
+from wagtail_blocks.blocks import HeaderBlock, ListBlock, ImageTextOverlayBlock, CroppedImagesWithTextBlock
 
 class HomePage(Page):
     body = StreamField([
-        ('header', blocks.HeaderBlock()),
-        ('list', blocks.ListBlock()),
-        ('image_text_overlay', blocks.ImageTextOverlayBlock()),
+        ('header', HeaderBlock()),
+        ('list', ListBlock()),
+        ('image_text_overlay', ImageTextOverlayBlock()),
+        ('cropped_images_with_text', CroppedImagesWithTextBlock()),
     ], blank=True)
 
     content_panels = Page.content_panels + [
         StreamFieldPanel("body", classname="Full"),
     ]
+
 ```
 2- For HomePage template, blocks should be rendered with IDs to function properly
 ```

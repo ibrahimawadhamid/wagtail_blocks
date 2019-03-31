@@ -1,0 +1,108 @@
+a, h2, h3, span {
+  color: #fff !important;
+  text-shadow: 1px 1px 10px #000;
+}
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+}
+
+span {
+  font-family: serif;
+	font-style: italic;
+	text-transform: lowercase;
+}
+
+.related-post figure {
+	height: 250px;
+	max-height: 250px;
+	overflow: hidden;
+	position: relative;
+}
+
+.related-post figure img {
+	left: 50%;
+  top: 50%;
+	max-width: 300%;
+  width: 300%;
+  height: auto;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+.related-post h2 {
+  display: block;
+	position: absolute;
+	top: 140px;
+  left: 25px;
+	font-size: 1.1rem;
+	line-height: 1.2rem;
+  text-transform: uppercase;
+  margin: 0 25px 0 0;
+}
+
+.related-post h3 {
+	position: absolute;
+	top: 10px;
+	left: 25px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+	font-weight: 100;
+	display: block;
+	line-height: 1rem;
+}
+
+@media (min-width: 576px) {
+  .related-post h2 {
+    font-size: 1.25rem;
+  	line-height: 1.5rem;
+  }
+
+  .related-post figure img {
+    left: 50%;
+    top: 50%;
+    max-width: 300%;
+    width: 200%;
+  }
+}
+
+@media (min-width: 992px) {
+  .related-post figure {
+    height: 400px;
+    max-height: 400px;
+  }
+
+  .related-post h2 {
+    font-size: 1.7rem;
+    line-height: 1.7rem;
+    top: 230px;
+  }
+
+  .related-post h3 {
+    top: 30px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .related-post figure {
+	  height: 500px;
+	  max-height: 500px;
+  }
+
+  .related-post h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+    top: 300px;
+    left: 30px;
+    margin: 0 30px 0 0;
+  }
+
+  .related-post h3 {
+    top: 45px;
+    left: 30px;
+    font-size: 0.875rem;
+  }
+
+}

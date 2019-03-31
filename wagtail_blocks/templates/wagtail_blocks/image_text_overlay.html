@@ -2,6 +2,7 @@
 {% load wagtailcore_tags %}
 {% load static from staticfiles %}
 
+<link href="{% static "wagtail_blocks/bootstrap.min.css" %}?v={{ VERSION }}" rel="stylesheet"/>
 <link href="{% static "wagtail_blocks/image_text_overlay.css" %}?v={{ VERSION }}" rel="stylesheet"/>
 
 <div class="imagebox" id="{{ block_id }}">
