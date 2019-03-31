@@ -1,4 +1,4 @@
-from wagtail.core.blocks import ChoiceBlock, StructBlock, CharBlock
+from wagtail.core.blocks import ChoiceBlock, StructBlock, CharBlock, ListBlock
 
 
 class HeaderChoiceBlock(ChoiceBlock):
@@ -24,3 +24,14 @@ class HeaderBlock(StructBlock):
     class Meta:
         template = 'wagtail_blocks/header.html'
         icon = "title"
+
+
+class ListBlock(StructBlock):
+    content = ListBlock(
+        CharBlock(),
+        label='Items',
+    )
+
+    class Meta:
+        template = 'wagtail_blocks/list.html'
+        icon = "list-ul"
