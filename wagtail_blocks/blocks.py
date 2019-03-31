@@ -1,4 +1,5 @@
 from wagtail.core.blocks import ChoiceBlock, StructBlock, CharBlock, ListBlock
+from wagtail.images.blocks import ImageChooserBlock
 
 
 class HeaderChoiceBlock(ChoiceBlock):
@@ -35,3 +36,17 @@ class ListBlock(StructBlock):
     class Meta:
         template = 'wagtail_blocks/list.html'
         icon = "list-ul"
+
+
+class ImageTextOverlayBlock(StructBlock):
+    image = ImageChooserBlock(
+        label='Image',
+    )
+    text = CharBlock(
+        label='Text',
+        max_length=200,
+    )
+
+    class Meta:
+        template = 'wagtail_blocks/image_text_overlay.html'
+        icon = 'fa-image'
