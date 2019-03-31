@@ -1,0 +1,7 @@
+{% load wagtailcore_tags %}
+
+<ul>
+    {% for bullet in value.content %}
+        <li>{{ bullet|safe }}</li>
+    {% endfor %}
+</ul>

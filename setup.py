@@ -22,7 +22,7 @@ documentation_extras = [
 
 setup(
     name='wagtail_blocks',
-    version='0.1.2',
+    version='0.2.0',
     packages=['wagtail_blocks'],
     include_package_data=True,
     license='MIT',
@@ -31,7 +31,7 @@ setup(
     url='https://github.com/ibrahimawadhamid/wagtail_blocks/',
     author='IbrahimAwadHamid',
     author_email='ibrahim.a.hamid@gmail.com',
-    download_url = 'https://github.com/ibrahimawadhamid/wagtail_blocks/archive/V0.1.2.tar.gz',
+    download_url = 'https://github.com/ibrahimawadhamid/wagtail_blocks/archive/V0.2.0.tar.gz',
     keywords = ['WAGTAIL', 'STREAMFIELD', 'WAGTAIL_BLCKS', 'WAGTAIL CMS'],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
