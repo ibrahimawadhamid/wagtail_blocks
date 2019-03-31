@@ -11,6 +11,7 @@
   opacity: 1;
   transition: 0.5s opacity;
   object-fit: cover;
+  width: 100%;
 }
 
 .imagebox .imagebox-desc {

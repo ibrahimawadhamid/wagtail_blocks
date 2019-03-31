@@ -1,0 +1,23 @@
+{% load wagtailimages_tags %}
+{% load wagtailcore_tags %}
+{% load static from staticfiles %}
+
+<link href="{% static "wagtail_blocks/bootstrap.min.css" %}?v={{ VERSION }}" rel="stylesheet"/>
+<link href="{% static "wagtail_blocks/cropped_images_with_text.css" %}?v={{ VERSION }}" rel="stylesheet"/>
+
+<div class="container">
+    <div class="row">
+        {% for image_item in value.image_items %}
+        <div class="col-6 col-md-4">
+            <a href="#" class="related-post">
+                <figure>
+                    <img src="{{ image_item.image.file.url }}"/>
+                </figure>
+                <h2 class="title no-margin">
+                    {{ image_item.text }}
+                </h2>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>

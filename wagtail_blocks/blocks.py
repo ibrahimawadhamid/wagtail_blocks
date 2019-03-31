@@ -1,8 +1,8 @@
-from wagtail.core.blocks import ChoiceBlock, StructBlock, CharBlock, ListBlock
+from wagtail.core import blocks
 from wagtail.images.blocks import ImageChooserBlock
 
 
-class HeaderChoiceBlock(ChoiceBlock):
+class HeaderChoiceBlock(blocks.ChoiceBlock):
     choices = (
         ('h1', 'H1'),
         ('h2', 'H2'),
@@ -13,11 +13,11 @@ class HeaderChoiceBlock(ChoiceBlock):
     )
 
 
-class HeaderBlock(StructBlock):
+class HeaderBlock(blocks.StructBlock):
     header = HeaderChoiceBlock(
         label='Header Size',
     )
-    text = CharBlock(
+    text = blocks.CharBlock(
         label='Text',
         max_length=50,
     )
@@ -27,9 +27,9 @@ class HeaderBlock(StructBlock):
         icon = "title"
 
 
-class ListBlock(StructBlock):
-    content = ListBlock(
-        CharBlock(),
+class ListBlock(blocks.StructBlock):
+    content = blocks.ListBlock(
+        blocks.CharBlock(),
         label='Items',
     )
 
@@ -38,11 +38,11 @@ class ListBlock(StructBlock):
         icon = "list-ul"
 
 
-class ImageTextOverlayBlock(StructBlock):
+class ImageTextOverlayBlock(blocks.StructBlock):
     image = ImageChooserBlock(
         label='Image',
     )
-    text = CharBlock(
+    text = blocks.CharBlock(
         label='Text',
         max_length=200,
     )
@@ -50,3 +50,34 @@ class ImageTextOverlayBlock(StructBlock):
     class Meta:
         template = 'wagtail_blocks/image_text_overlay.html'
         icon = 'fa-image'
+
+
+class SingleImageWithText(blocks.StructBlock):
+    image = ImageChooserBlock(
+        label='Image',
+    )
+    text = blocks.CharBlock(
+        label='Text',
+        max_length=200,
+    )
+
+
+class CroppedImagesWithTextBlock(blocks.StructBlock):
+    image_items = blocks.ListBlock(
+        SingleImageWithText(),
+        label="Image Item",
+    )
+
+    class Meta:
+        template = 'wagtail_blocks/cropped_images_with_text.html'
+        icon = 'fa-camera-retro'
+
+# class CroppedImagesWithTextBlock(StructBlock):
+#     image = ListBlock(
+#         SingleImageWithText(),
+#         label='Items',
+#     )
+#
+#     class Meta:
+#         template = 'wagtail_blocks/cropped_images_with_text.html'
+#         icon = 'fa-camera-retro'
