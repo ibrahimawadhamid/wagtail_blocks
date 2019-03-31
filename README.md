@@ -33,6 +33,7 @@ class HomePage(Page):
 ## Available Blocks
 Check [Screenshots](https://github.com/ibrahimawadhamid/wagtail_blocks/tree/master/screenshots)
 - Header Block
+- List Block
 
 ## Supported Versions
 ![wagtail](https://img.shields.io/badge/Wagtail-2.x-green.svg) ![Python](https://img.shields.io/pypi/pyversions/wagtail-blocks.svg)
