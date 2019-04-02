@@ -1,7 +1,7 @@
 # Usage
 1- Sample usage in wagtail page called "Home":
 ```python
-from wagtail_blocks.blocks import HeaderBlock, ListBlock, ImageTextOverlayBlock, CroppedImagesWithTextBlock
+from wagtail_blocks.blocks import HeaderBlock, ListBlock, ImageTextOverlayBlock, CroppedImagesWithTextBlock, ListWithImagesBlock
 
 class HomePage(Page):
     body = StreamField([
@@ -9,6 +9,7 @@ class HomePage(Page):
         ('list', ListBlock()),
         ('image_text_overlay', ImageTextOverlayBlock()),
         ('cropped_images_with_text', CroppedImagesWithTextBlock()),
+        ('list_with_images', ListWithImagesBlock()),
     ], blank=True)
 
     content_panels = Page.content_panels + [

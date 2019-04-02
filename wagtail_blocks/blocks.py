@@ -72,12 +72,37 @@ class CroppedImagesWithTextBlock(blocks.StructBlock):
         template = 'wagtail_blocks/cropped_images_with_text.html'
         icon = 'fa-camera-retro'
 
-# class CroppedImagesWithTextBlock(StructBlock):
-#     image = ListBlock(
-#         SingleImageWithText(),
-#         label='Items',
-#     )
-#
-#     class Meta:
-#         template = 'wagtail_blocks/cropped_images_with_text.html'
-#         icon = 'fa-camera-retro'
+
+class SingleListImage(blocks.StructBlock):
+    image = ImageChooserBlock(
+        label='Image',
+    )
+    title = blocks.CharBlock(
+        label='Title',
+        max_length=200,
+    )
+    text = blocks.CharBlock(
+        label='Text',
+        max_length=200,
+    )
+    link_text = blocks.CharBlock(
+        label='Link Text',
+        max_length=200,
+        required=False,
+    )
+    link_url = blocks.URLBlock(
+        label='Link URL',
+        max_length=200,
+        required=False,
+    )
+
+
+class ListWithImagesBlock(blocks.StructBlock):
+    list_items = blocks.ListBlock(
+        SingleListImage(),
+        label="List Item",
+    )
+
+    class Meta:
+        template = 'wagtail_blocks/list_with_images.html'
+        icon = 'fa-camera-retro'
