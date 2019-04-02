@@ -19,7 +19,7 @@ Add the following enteries to your `settings.py` in the INSTALLED_APPS section:
 
 ## Sample Usage
 ```python
-from wagtail_blocks.blocks import HeaderBlock, ListBlock, ImageTextOverlayBlock, CroppedImagesWithTextBlock
+from wagtail_blocks.blocks import HeaderBlock, ListBlock, ImageTextOverlayBlock, CroppedImagesWithTextBlock, ListWithImagesBlock
 
 class HomePage(Page):
     body = StreamField([
@@ -27,6 +27,7 @@ class HomePage(Page):
         ('list', ListBlock()),
         ('image_text_overlay', ImageTextOverlayBlock()),
         ('cropped_images_with_text', CroppedImagesWithTextBlock()),
+        ('list_with_images', ListWithImagesBlock()),
     ], blank=True)
 
     content_panels = Page.content_panels + [
@@ -47,6 +48,7 @@ Check [Screenshots](https://github.com/ibrahimawadhamid/wagtail_blocks/tree/mast
 - List (Unordered List)
 - Image with Text Overlay
 - Cropped Images with Text
+- List with Images and Links
 
 All blocks are Bootstrap 4 compatible.
 

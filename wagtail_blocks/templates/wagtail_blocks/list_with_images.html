@@ -1,0 +1,33 @@
+{% load wagtailimages_tags %}
+{% load wagtailcore_tags %}
+{% load static from staticfiles %}
+
+<link href="{% static 'wagtail_blocks/bootstrap.min.css' %}?v={{ VERSION }}" rel="stylesheet" id="bootstrap-css"/>
+<link href="{% static 'wagtail_blocks/list_with_images.css' %}?v={{ VERSION }}" rel="stylesheet"/>
+
+<section class="row-section">
+    <div class="container">
+        <div class="col-md-10 offset-md-1 row-block">
+            <ul id="{{ block_id }}">
+                {% for list_item in value.list_items %}
+                <li>
+                    <div class="media">
+                        <div class="media-left align-self-center">
+                            <img class="rounded-circle" src="{{ list_item.image.file.url }}">
+                        </div>
+                        <div class="media-body">
+                            <h4>{{ list_item.title }}</h4>
+                            <p>{{ list_item.text }}</p>
+                        </div>
+                        {% if list_item.link_text %}
+                        <div class="media-right align-self-center">
+                            <a href="{{ list_item.link_url }}" class="btn btn-default">{{ list_item.link_text}}</a>
+                        </div>
+                        {% endif %}
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
