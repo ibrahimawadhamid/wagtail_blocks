@@ -1,0 +1,17 @@
+{% load wagtailimages_tags %}
+{% load wagtailcore_tags %}
+{% load static from staticfiles %}
+
+<link href="{% static 'wagtail_blocks/bootstrap.min.css' %}?v={{ VERSION }}" rel="stylesheet"/>
+
+<div class="container">
+    <div class="row text-center text-lg-left">
+        {% for image_item in value.image_items %}
+        <div class="col-lg-3 col-md-4 col-6">
+            <a href="#" class="d-block mb-4 h-100">
+                <img class="img-fluid img-thumbnail" src="{{ image_item.image.file.url }}" alt="">
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>

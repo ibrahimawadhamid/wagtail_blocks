@@ -10,6 +10,7 @@ For Source Code visit [Github](https://github.com/ibrahimawadhamid/wagtail_block
 - Image with Text Overlay
 - Cropped Images with Text
 - List with Images and Links
+- Thumbnail Gallery
 
 All blocks are Bootstrap 4 compatible.
 

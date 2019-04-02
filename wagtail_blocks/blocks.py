@@ -106,3 +106,20 @@ class ListWithImagesBlock(blocks.StructBlock):
     class Meta:
         template = 'wagtail_blocks/list_with_images.html'
         icon = 'fa-camera-retro'
+
+
+class SingleThumbnail(blocks.StructBlock):
+    image = ImageChooserBlock(
+        label='Image',
+    )
+
+
+class ThumbnailGalleryBlock(blocks.StructBlock):
+    image_items = blocks.ListBlock(
+        SingleThumbnail(),
+        label="Image",
+    )
+
+    class Meta:
+        template = 'wagtail_blocks/thumbnail_gallery.html'
+        icon = 'fa-camera-retro'

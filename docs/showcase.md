@@ -16,3 +16,6 @@
 
 ### List with Images and Links
 ![ListWithImagesBlock-view](screenshots/ListWithImagesBlock-view.PNG)
+
+### Thumbnail Gallery
+![ThumbnailGalleryBlock-view](screenshots/ThumbnailGalleryBlock-view.PNG)
