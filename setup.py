@@ -9,7 +9,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 # Package dependencies
 install_requires = [
-    'wagtail>=2.0',
+    'wagtail>=1.5',
     'wagtailfontawesome',
 ]
 
@@ -23,7 +23,7 @@ documentation_extras = [
 
 setup(
     name='wagtail_blocks',
-    version='0.3.2',
+    version='0.4.0',
     packages=['wagtail_blocks'],
     include_package_data=True,
     license='MIT',
@@ -32,8 +32,8 @@ setup(
     url='https://github.com/ibrahimawadhamid/wagtail_blocks/',
     author='IbrahimAwadHamid',
     author_email='ibrahim.a.hamid@gmail.com',
-    download_url = 'https://github.com/ibrahimawadhamid/wagtail_blocks/archive/V0.3.2.tar.gz',
-    keywords = ['WAGTAIL', 'STREAMFIELD', 'WAGTAIL_BLCKS', 'WAGTAIL CMS'],
+    download_url = 'https://github.com/ibrahimawadhamid/wagtail_blocks/archive/V0.4.0.tar.gz',
+    keywords = ['WAGTAIL', 'STREAMFIELD', 'WAGTAIL_BLOCKS', 'WAGTAIL CMS'],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
@@ -42,6 +42,8 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
