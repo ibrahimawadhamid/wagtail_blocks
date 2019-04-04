@@ -1,0 +1,2 @@
+wagtail>=1.14.3
+wagtailfontawesome>=1.1.4
