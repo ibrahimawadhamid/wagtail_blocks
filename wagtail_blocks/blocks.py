@@ -1,5 +1,13 @@
-from wagtail.core import blocks
-from wagtail.images.blocks import ImageChooserBlock
+try:
+    from wagtail.wagtailcore import blocks
+    from wagtail.wagtailimages.blocks import ImageChooserBlock
+
+    wagtail_version = 1
+except ImportError:
+    from wagtail.core import blocks
+    from wagtail.images.blocks import ImageChooserBlock
+
+    wagtail_version = 2
 
 
 class HeaderChoiceBlock(blocks.ChoiceBlock):
@@ -105,7 +113,7 @@ class ListWithImagesBlock(blocks.StructBlock):
 
     class Meta:
         template = 'wagtail_blocks/list_with_images.html'
-        icon = 'fa-camera-retro'
+        icon = 'fa-id-card-o'
 
 
 class SingleThumbnail(blocks.StructBlock):
@@ -122,4 +130,4 @@ class ThumbnailGalleryBlock(blocks.StructBlock):
 
     class Meta:
         template = 'wagtail_blocks/thumbnail_gallery.html'
-        icon = 'fa-camera-retro'
+        icon = 'fa-object-ungroup'

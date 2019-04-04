@@ -56,4 +56,4 @@ Check [Screenshots](https://github.com/ibrahimawadhamid/wagtail_blocks/tree/mast
 All blocks are Bootstrap 4 compatible.
 
 ## Supported Versions
-![wagtail](https://img.shields.io/badge/Wagtail-2.x-green.svg) ![Python](https://img.shields.io/pypi/pyversions/wagtail-blocks.svg)  ![Boostrap](https://img.shields.io/badge/Bootstrap-4.3-blue.svg)
+![wagtail](https://img.shields.io/badge/Wagtail-1.x|2.x-green.svg) ![Python](https://img.shields.io/pypi/pyversions/wagtail-blocks.svg)  ![Boostrap](https://img.shields.io/badge/Bootstrap-4.3-blue.svg)
