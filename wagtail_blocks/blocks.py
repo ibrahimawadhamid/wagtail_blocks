@@ -1,12 +1,14 @@
-try:
-    from wagtail.wagtailcore import blocks
-    from wagtail.wagtailimages.blocks import ImageChooserBlock
+import sys
 
+if sys.version_info < (3, 0):
+    # Do stuff for old version...
+    from wagtail.wagtailcore import blocks
+    from wagtail.wagtailimages.blocks import ImageChooserBlockc
     wagtail_version = 1
-except ImportError:
+else:
+    # Do 3.0+ stuff
     from wagtail.core import blocks
     from wagtail.images.blocks import ImageChooserBlock
-
     wagtail_version = 2
 
 
