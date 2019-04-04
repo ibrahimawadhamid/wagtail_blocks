@@ -45,15 +45,18 @@ class HomePage(Page):
 ```
 
 ## Available Blocks
-Check [Screenshots](https://github.com/ibrahimawadhamid/wagtail_blocks/tree/master/screenshots)
-- Header (H1, H2, H3, H4, H5, H6)
-- List (Unordered List)
-- Image with Text Overlay
-- Cropped Images with Text
-- List with Images and Links
-- Thumbnail Gallery
-
+Check [Showcase](https://wagtail-blocks.readthedocs.io/en/latest/showcase/)
+> - Header (H1, H2, H3, H4, H5, H6)
+> - List (Unordered List)
+> - Image with Text Overlay
+> - Cropped Images with Text
+> - List with Images and Links
+> - Thumbnail Gallery
 All blocks are Bootstrap 4 compatible.
 
 ## Supported Versions
-![wagtail](https://img.shields.io/badge/Wagtail-1.x|2.x-green.svg) ![Python](https://img.shields.io/pypi/pyversions/wagtail-blocks.svg)  ![Boostrap](https://img.shields.io/badge/Bootstrap-4.3-blue.svg)
+> - Python 2 & 3
+> - All wagtail versions! (1.x | 2.x)
+> - Bootstrap 4
+
+![wagtail](https://img.shields.io/badge/Wagtail-1.x|2.x-green.svg) ![Python](https://img.shields.io/pypi/pyversions/wagtail-blocks.svg) ![Boostrap](https://img.shields.io/badge/Bootstrap-4.3-blue.svg)
