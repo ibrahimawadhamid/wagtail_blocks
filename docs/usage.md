@@ -1,8 +1,9 @@
-# Usage
+In your page model, inside the streamfield you can add any type of the available blocks.
+
 1- Sample usage in wagtail page called "Home":
 ```python
 from wagtail_blocks.blocks import HeaderBlock, ListBlock, ImageTextOverlayBlock, CroppedImagesWithTextBlock, \
-    ListWithImagesBlock, ThumbnailGalleryBlock
+    ListWithImagesBlock, ThumbnailGalleryBlock, ChartBlock
 
 class HomePage(Page):
     body = StreamField([
@@ -12,6 +13,7 @@ class HomePage(Page):
         ('cropped_images_with_text', CroppedImagesWithTextBlock()),
         ('list_with_images', ListWithImagesBlock()),
         ('thumbnail_gallery', ThumbnailGalleryBlock()),
+        ('chart', ChartBlock()),
     ], blank=True)
 
     content_panels = Page.content_panels + [

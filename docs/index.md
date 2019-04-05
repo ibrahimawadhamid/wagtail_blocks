@@ -1,7 +1,7 @@
 # Welcome to wagtail-blocks
-For Source Code visit [Github](https://github.com/ibrahimawadhamid/wagtail_blocks).
+A Collection of awesome Wagtail CMS stream-field blocks and Charts.
 
-[![PyPI](https://img.shields.io/pypi/v/wagtail-blocks.svg)](https://pypi.python.org/pypi/wagtail-blocks) ![PyPI - License](https://img.shields.io/pypi/l/wagtail-blocks.svg) ![Build](https://img.shields.io/pypi/status/wagtail-blocks.svg) [![Documentation Status](https://readthedocs.org/projects/wagtail-blocks/badge/?version=latest)](https://wagtail-blocks.readthedocs.io/en/latest/?badge=latest)
+[![PyPI](https://img.shields.io/pypi/v/wagtail-blocks.svg)](https://pypi.python.org/pypi/wagtail-blocks) ![Build](https://travis-ci.org/ibrahimawadhamid/wagtail_blocks.svg?branch=master) ![Build](https://img.shields.io/pypi/status/wagtail-blocks.svg) [![Documentation Status](https://readthedocs.org/projects/wagtail-blocks/badge/?version=latest)](https://wagtail-blocks.readthedocs.io/en/latest/?badge=latest) ![PyPI - License](https://img.shields.io/pypi/l/wagtail-blocks.svg)
 
 
 ## Supported Versions
@@ -19,3 +19,4 @@ Check [Showcase](https://wagtail-blocks.readthedocs.io/en/latest/showcase/)
 > - Cropped Images with Text
 > - List with Images and Links
 > - Thumbnail Gallery
+> - Chart (Bar - Pie - Line - Area - Radar)

@@ -8,8 +8,10 @@ theme:
     hljs_languages:
         - python
 
-nav:
-  - Home: index.md
-  - Installation: installation.md
-  - Usage: usage.md
-  - Showcase: showcase.md
+pages:
+  - Home: 'index.md'
+  - Installation: 'installation.md'
+  - Usage: 'usage.md'
+  - Showcase:
+    - 'Standard Blocks': 'showcase/standard-blocks.md'
+    - 'Charts': 'showcase/charts.md'
