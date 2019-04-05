@@ -2,6 +2,7 @@
 [![PyPI](https://img.shields.io/pypi/v/wagtail-blocks.svg)](https://pypi.python.org/pypi/wagtail-blocks) ![Build](https://travis-ci.org/ibrahimawadhamid/wagtail_blocks.svg?branch=master) ![Build](https://img.shields.io/pypi/status/wagtail-blocks.svg) [![Documentation Status](https://readthedocs.org/projects/wagtail-blocks/badge/?version=latest)](https://wagtail-blocks.readthedocs.io/en/latest/?badge=latest) ![PyPI - License](https://img.shields.io/pypi/l/wagtail-blocks.svg)
 
 A Collection of awesome Wagtail CMS stream-field blocks and Charts.
+
 *Check out [Awesome Wagtail](https://github.com/springload/awesome-wagtail) for more awesome packages and resources from the Wagtail community.*
 
 ## Quickstart
@@ -47,7 +48,9 @@ class HomePage(Page):
 ```
 
 ## Available Blocks
-Check Showcase for [Standard Blocks](https://wagtail-blocks.readthedocs.io/en/latest/showcase/standard-blocks/) or [Charts](https://wagtail-blocks.readthedocs.io/en/latest/showcase/charts/) 
+Check Showcase for [Standard Blocks](https://wagtail-blocks.readthedocs.io/en/latest/showcase/standard-blocks/) or [Charts](https://wagtail-blocks.readthedocs.io/en/latest/showcase/charts/)
+![streamfield](https://wagtail-blocks.readthedocs.io/en/latest/showcase/screenshots/streamfield.PNG)
+ 
 > - Header (H1, H2, H3, H4, H5, H6)
 > - List (Unordered List)
 > - Image with Text Overlay

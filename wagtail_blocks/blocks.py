@@ -164,14 +164,15 @@ class ChartBlock(blocks.StructBlock):
     title = blocks.CharBlock(
         label='Title',
         max_length=120,
+        default='Chart Title',
     )
     chart_type = ChartChoiceBlock(
         label='Chart Type',
         default='bar'
     )
     labels = blocks.ListBlock(
-        blocks.CharBlock(max_length=40),
-        label='Chart Labels'
+        blocks.CharBlock(max_length=40, label="Label", default='Label'),
+        label='Chart Labels',
     )
     datasets = blocks.ListBlock(
         ChartDataset(),
