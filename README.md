@@ -47,7 +47,7 @@ class HomePage(Page):
 ```
 
 ## Available Blocks
-Check [Showcase](https://wagtail-blocks.readthedocs.io/en/latest/showcase/)
+Check Showcase for [Standard Blocks](https://wagtail-blocks.readthedocs.io/en/latest/showcase/standard-blocks/) or [Charts](https://wagtail-blocks.readthedocs.io/en/latest/showcase/charts/) 
 > - Header (H1, H2, H3, H4, H5, H6)
 > - List (Unordered List)
 > - Image with Text Overlay
