@@ -1,0 +1,84 @@
+{% load wagtailimages_tags %}
+{% load wagtailcore_tags %}
+{% load static from staticfiles %}
+
+<link href="{% static 'wagtail_blocks/bootstrap.min.css' %}?v={{ VERSION }}" rel="stylesheet"/>
+<script src="{% static 'wagtail_blocks/js/Chart.bundle.min.js' %}?v={{ VERSION }}"></script>
+
+<div class="container">
+    <div class="row text-center text-lg-left">
+        <div class="col-lg-12 col-md-12 col-12">
+            <canvas id="{{ block_id }}" height="40vh" width="80vw"></canvas>
+        </div>
+    </div>
+</div>
+
+<script>
+    const chart_type = '{{value.chart_type}}';
+    let color_order = getRandomInt(6);
+    const colors = [
+        'rgba(255, 99, 132, 0.6)',
+        'rgba(54, 162, 235, 0.6)',
+        'rgba(255, 206, 86, 0.6)',
+        'rgba(75, 192, 192, 0.6)',
+        'rgba(153, 102, 255, 0.6)',
+        'rgba(255, 159, 64, 0.6)',
+        'rgba(75, 192, 192, 0.6)',
+        'rgba(153, 102, 255, 0.6)',
+    ];
+
+    function get_color() {
+        if(color_order === colors.length) {
+            color_order = 0;
+        }
+        return(colors[color_order++]);
+    }
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    function get_datasets() {
+        const datasets = {{value.datasets|safe}};
+        let final_datasets = [];
+        for (let i = 0; i < datasets.length; i++) {
+            let temp_dataset = {};
+            temp_dataset['label'] = datasets[i]['label'];
+            temp_dataset['data'] = datasets[i]['dataset_data'];
+            if(chart_type == "pie" || chart_type == "doughnut" || datasets.length == 1) {
+                let backgroundColor = [];
+                for(let j=0; j < temp_dataset['data'].length; j++)
+                    backgroundColor.push(get_color());
+                temp_dataset['backgroundColor'] = backgroundColor;
+            } else {
+                temp_dataset['backgroundColor'] = get_color();
+            }
+            temp_dataset['borderColor'] = get_color();
+            temp_dataset['borderWidth'] = 1;
+            final_datasets.push(temp_dataset);
+        }
+        return(final_datasets);
+    };
+
+    const ctx = document.getElementById('{{ block_id }}').getContext('2d');
+    const block_chart = new Chart(ctx, {
+        type: '{{value.chart_type}}',
+        data: {
+            labels: {{value.labels|safe}},
+            datasets: get_datasets(),
+        },
+    options: {
+            title: {
+                display: true,
+                text: '{{value.title}}'
+              },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+    })
+    ;
+</script>

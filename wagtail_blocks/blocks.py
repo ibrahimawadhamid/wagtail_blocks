@@ -1,14 +1,14 @@
-import sys
-
-if sys.version_info < (3, 0):
-    # Do stuff for old version...
+import json
+try:
     from wagtail.wagtailcore import blocks
-    from wagtail.wagtailimages.blocks import ImageChooserBlockc
+    from wagtail.wagtailimages.blocks import ImageChooserBlock
+
     wagtail_version = 1
-else:
-    # Do 3.0+ stuff
+
+except ImportError:
     from wagtail.core import blocks
     from wagtail.images.blocks import ImageChooserBlock
+
     wagtail_version = 2
 
 
@@ -133,3 +133,56 @@ class ThumbnailGalleryBlock(blocks.StructBlock):
     class Meta:
         template = 'wagtail_blocks/thumbnail_gallery.html'
         icon = 'fa-object-ungroup'
+
+
+class ChartChoiceBlock(blocks.ChoiceBlock):
+    choices = (
+        ('bar', 'Bar'),
+        ('horizontalBar', 'Horizontal Bar'),
+        ('pie', 'Pie'),
+        ('doughnut', 'Doughnut'),
+        ('polarArea', 'Polar Area'),
+        ('radar', 'Radar'),
+        ('line', 'Line'),
+    )
+
+
+class ChartDataset(blocks.StructBlock):
+    label = blocks.CharBlock(
+        label='Dataset Label',
+        max_length=120,
+        default='Dataset #1',
+    )
+    dataset_data = blocks.ListBlock(
+        blocks.IntegerBlock(),
+        label='Data',
+        default='0',
+    )
+
+
+class ChartBlock(blocks.StructBlock):
+    title = blocks.CharBlock(
+        label='Title',
+        max_length=120,
+    )
+    chart_type = ChartChoiceBlock(
+        label='Chart Type',
+        default='bar'
+    )
+    labels = blocks.ListBlock(
+        blocks.CharBlock(max_length=40),
+        label='Chart Labels'
+    )
+    datasets = blocks.ListBlock(
+        ChartDataset(),
+        label='Dataset',
+    )
+
+    def get_context(self, value, parent_context=None):
+        context = super().get_context(value, parent_context=parent_context)
+        value['datasets'] = json.dumps(value['datasets'])
+        return context
+
+    class Meta:
+        template = 'wagtail_blocks/chart.html'
+        icon = 'fa-bar-chart'

@@ -1,7 +1,8 @@
 # wagtail_blocks ![wagtail](https://img.shields.io/badge/CMS-Wagtail-green.svg)
-[![PyPI](https://img.shields.io/pypi/v/wagtail-blocks.svg)](https://pypi.python.org/pypi/wagtail-blocks) ![PyPI - License](https://img.shields.io/pypi/l/wagtail-blocks.svg) ![Build](https://img.shields.io/pypi/status/wagtail-blocks.svg) [![Documentation Status](https://readthedocs.org/projects/wagtail-blocks/badge/?version=latest)](https://wagtail-blocks.readthedocs.io/en/latest/?badge=latest)
+[![PyPI](https://img.shields.io/pypi/v/wagtail-blocks.svg)](https://pypi.python.org/pypi/wagtail-blocks) ![Build](https://travis-ci.org/ibrahimawadhamid/wagtail_blocks.svg?branch=master) ![Build](https://img.shields.io/pypi/status/wagtail-blocks.svg) [![Documentation Status](https://readthedocs.org/projects/wagtail-blocks/badge/?version=latest)](https://wagtail-blocks.readthedocs.io/en/latest/?badge=latest) ![PyPI - License](https://img.shields.io/pypi/l/wagtail-blocks.svg)
 
-A Collection of awesome Wagtail CMS stream-field blocks.
+A Collection of awesome Wagtail CMS stream-field blocks and Charts.
+*Check out [Awesome Wagtail](https://github.com/springload/awesome-wagtail) for more awesome packages and resources from the Wagtail community.*
 
 ## Quickstart
 
@@ -20,7 +21,7 @@ Add the following enteries to your `settings.py` in the INSTALLED_APPS section:
 ## Sample Usage
 ```python
 from wagtail_blocks.blocks import HeaderBlock, ListBlock, ImageTextOverlayBlock, CroppedImagesWithTextBlock, \
-    ListWithImagesBlock, ThumbnailGalleryBlock
+    ListWithImagesBlock, ThumbnailGalleryBlock, ChartBlock
 
 class HomePage(Page):
     body = StreamField([
@@ -30,6 +31,7 @@ class HomePage(Page):
         ('cropped_images_with_text', CroppedImagesWithTextBlock()),
         ('list_with_images', ListWithImagesBlock()),
         ('thumbnail_gallery', ThumbnailGalleryBlock()),
+        ('chart', ChartBlock()),
     ], blank=True)
 
     content_panels = Page.content_panels + [
@@ -52,7 +54,7 @@ Check [Showcase](https://wagtail-blocks.readthedocs.io/en/latest/showcase/)
 > - Cropped Images with Text
 > - List with Images and Links
 > - Thumbnail Gallery
-All blocks are Bootstrap 4 compatible.
+> - Chart (Bar - Pie - Line - Area - Radar)
 
 ## Supported Versions
 > - Python 2 & 3
