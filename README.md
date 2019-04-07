@@ -5,6 +5,9 @@ A Collection of awesome Wagtail CMS stream-field blocks and Charts.
 
 *Check out [Awesome Wagtail](https://github.com/springload/awesome-wagtail) for more awesome packages and resources from the Wagtail community.*
 
+## Note
+**This project is still early on in its development lifecycle. It is possible for breaking changes to occur between versions until reaching a stable 1.0**, however we will clearly note any breaking changes between releases if applicable. Feedback and pull requests are welcome.
+
 ## Quickstart
 
 You must have your [Wagtail](https://wagtail.io/) project up and running:
