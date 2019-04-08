@@ -2,10 +2,8 @@ import os
 from setuptools import setup, find_packages
 
 try:
-    from pip._internal.req import parse_requirements
     from pip._internal.download import PipSession
 except ImportError:
-    from pip.req import parse_requirements
     from pip.download import PipSession
 
 CURRENT_FILE_PATH = os.path.abspath(__file__)
@@ -18,10 +16,8 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 # Package dependencies
-install_reqs = parse_requirements(
-    os.path.join(CURRENT_DIR, "requirements.txt"), session=session)
-reqs = [str(ir.req) for ir in install_reqs]
-
+with open('requirements.txt') as f:
+    reqs = f.read().splitlines()
 # Testing dependencies
 testing_extras = [
 ]
