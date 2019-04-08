@@ -1,4 +1,5 @@
 import os
+import pip
 from setuptools import setup, find_packages
 
 try:
@@ -18,9 +19,24 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 # Package dependencies
-install_reqs = parse_requirements(
-    os.path.join(CURRENT_DIR, "requirements.txt"), session=session)
-reqs = [str(ir.req) for ir in install_reqs]
+links = []
+requires = []
+
+try:
+    requirements = pip.req.parse_requirements('requirements.txt')
+except:
+    # new versions of pip requires a session
+    requirements = pip.req.parse_requirements(
+        'requirements.txt', session=pip.download.PipSession())
+
+for item in requirements:
+    # we want to handle package names and also repo urls
+    if getattr(item, 'url', None):  # older pip has url
+        links.append(str(item.url))
+    if getattr(item, 'link', None): # newer pip has link
+        links.append(str(item.link))
+    if item.req:
+        requires.append(str(item.req))
 
 # Testing dependencies
 testing_extras = [
@@ -61,7 +77,7 @@ setup(
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
         'Topic :: Software Development',
     ],
-    install_requires=reqs,
+    install_requires=requires,
     extras_require={
         'testing': testing_extras,
         'docs': documentation_extras
