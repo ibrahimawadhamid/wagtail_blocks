@@ -1,0 +1,50 @@
+{% load wagtailcore_tags %}
+{% load static from staticfiles %}
+{% load wagtail_html_support %}
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin=""/>
+
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+        integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+        crossorigin=""></script>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div id="{{ block_id }}" style="height: 400px; width: 100%; margin-bottom: 20px;"></div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    {
+        let current_zoom_level = {{ value.zoom_level }};
+        let center_x = {{ value.location_x }};
+        let center_y = {{ value.location_y }};
+        let marker_x = {{ value.marker_x }};
+        let marker_y = {{ value.marker_y }};
+        let marker_title = '{{ value.marker_title }}';
+        let marker_description = '{{ value.marker_description|resolve_html|richtext }}';
+
+        var mymap = L.map('{{ block_id }}').setView([center_x, center_y], current_zoom_level);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution:
+                '<a href="https://github.com/ibrahimawadhamid/wagtail_blocks">Wagtail Blocks</a> ' +
+                'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ',
+            id: 'mapbox.streets'
+        }).addTo(mymap);
+
+        L.marker([marker_x, marker_y]).addTo(mymap)
+            .bindPopup("" +
+                "<b>" + marker_title + "</b>" +
+                "<br/>" + marker_description + "<br/>").openPopup();
+    }
+
+</script>

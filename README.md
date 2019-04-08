@@ -5,6 +5,9 @@ A Collection of awesome Wagtail CMS stream-field blocks and Charts.
 
 *Check out [Awesome Wagtail](https://github.com/springload/awesome-wagtail) for more awesome packages and resources from the Wagtail community.*
 
+## Note
+**This project is still early on in its development lifecycle. It is possible for breaking changes to occur between versions until reaching a stable 1.0**, however we will clearly note any breaking changes between releases if applicable. Feedback and pull requests are welcome.
+
 ## Quickstart
 
 You must have your [Wagtail](https://wagtail.io/) project up and running:
@@ -48,7 +51,9 @@ class HomePage(Page):
 ```
 
 ## Available Blocks
-Check Showcase for [Standard Blocks](https://wagtail-blocks.readthedocs.io/en/latest/showcase/standard-blocks/) or [Charts](https://wagtail-blocks.readthedocs.io/en/latest/showcase/charts/)
+Check Showcase for [Standard Blocks](https://wagtail-blocks.readthedocs.io/en/latest/showcase/standard-blocks/) 
+or [Charts](https://wagtail-blocks.readthedocs.io/en/latest/showcase/chart/)
+or [Maps](https://wagtail-blocks.readthedocs.io/en/latest/showcase/map/)
 ![streamfield](https://wagtail-blocks.readthedocs.io/en/latest/showcase/screenshots/streamfield.PNG)
  
 > - Header (H1, H2, H3, H4, H5, H6)
@@ -58,6 +63,7 @@ Check Showcase for [Standard Blocks](https://wagtail-blocks.readthedocs.io/en/la
 > - List with Images and Links
 > - Thumbnail Gallery
 > - Chart (Bar - Pie - Line - Area - Radar)
+> - Map (Marker with rich text description)
 
 ## Supported Versions
 > - Python 2 & 3

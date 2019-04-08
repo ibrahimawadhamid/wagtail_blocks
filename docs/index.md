@@ -12,7 +12,9 @@ A Collection of awesome Wagtail CMS stream-field blocks and Charts.
 ![wagtail](https://img.shields.io/badge/Wagtail-1.x|2.x-green.svg) ![Python](https://img.shields.io/pypi/pyversions/wagtail-blocks.svg) ![Boostrap](https://img.shields.io/badge/Bootstrap-4.3-blue.svg)
 
 ## Available Blocks
-Check Showcase for [Standard Blocks](https://wagtail-blocks.readthedocs.io/en/latest/showcase/standard-blocks/) or [Charts](https://wagtail-blocks.readthedocs.io/en/latest/showcase/charts/)
+Check Showcase for [Standard Blocks](https://wagtail-blocks.readthedocs.io/en/latest/showcase/standard-blocks/) 
+or [Charts](https://wagtail-blocks.readthedocs.io/en/latest/showcase/chart/)
+or [Maps](https://wagtail-blocks.readthedocs.io/en/latest/showcase/map/)
 ![streamfield](showcase/screenshots/streamfield.PNG)
 
 > - Header (H1, H2, H3, H4, H5, H6)
@@ -22,3 +24,4 @@ Check Showcase for [Standard Blocks](https://wagtail-blocks.readthedocs.io/en/la
 > - List with Images and Links
 > - Thumbnail Gallery
 > - Chart (Bar - Pie - Line - Area - Radar)
+> - Map (Marker with rich text description)
