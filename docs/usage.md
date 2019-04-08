@@ -3,7 +3,7 @@ In your page model, inside the streamfield you can add any type of the available
 1- Sample usage in wagtail page called "Home":
 ```python
 from wagtail_blocks.blocks import HeaderBlock, ListBlock, ImageTextOverlayBlock, CroppedImagesWithTextBlock, \
-    ListWithImagesBlock, ThumbnailGalleryBlock, ChartBlock
+    ListWithImagesBlock, ThumbnailGalleryBlock, ChartBlock, MapBlock
 
 class HomePage(Page):
     body = StreamField([
@@ -14,6 +14,7 @@ class HomePage(Page):
         ('list_with_images', ListWithImagesBlock()),
         ('thumbnail_gallery', ThumbnailGalleryBlock()),
         ('chart', ChartBlock()),
+        ('map', MapBlock()),
     ], blank=True)
 
     content_panels = Page.content_panels + [
