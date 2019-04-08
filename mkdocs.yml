@@ -14,4 +14,5 @@ pages:
   - Usage: 'usage.md'
   - Showcase:
     - 'Standard Blocks': 'showcase/standard-blocks.md'
-    - 'Charts': 'showcase/charts.md'
+    - 'Chart': 'showcase/chart.md'
+    - 'Map': 'showcase/map.md'

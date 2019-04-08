@@ -1,0 +1,67 @@
+{% load wagtailcore_tags %}
+
+<div class="{{ classname }}">
+    {% if help_text %}
+        <div class="object-help help">{{ help_text }}</div>
+    {% endif %}
+    <ul class="fields">
+        {% for child in children.values %}
+            <li{% if child.block.required %} class="required" {% else %} hidden {% endif %}>
+                {% if child.block.label %}
+                    <label{% if child.id_for_label %}
+                        for="{{ child.id_for_label }}"{% endif %}>{{ child.block.label }}:</label>
+                    {{ child.render_form }}
+                {% endif %}
+            </li>
+        {% endfor %}
+        <li>
+            <div id="{{ prefix }}" style="height: 400px; z-index:0;">
+            </div>
+        </li>
+    </ul>
+</div>
+
+<script>
+    {
+        let marker_title = $('#{{ prefix }}-marker_title')[0];
+        let current_zoom_level = $('#{{ prefix }}-zoom_level')[0];
+        let center_x = $('#{{ prefix }}-location_x')[0];
+        let center_y = $('#{{ prefix }}-location_y')[0];
+        let marker_x = $('#{{ prefix }}-marker_x')[0];
+        let marker_y = $('#{{ prefix }}-marker_y')[0];
+
+        let mymap = L.map('{{ prefix }}').setView([center_x.value, center_y.value], current_zoom_level.value);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution:
+                '<a href="https://github.com/ibrahimawadhamid/wagtail_blocks">Wagtail Blocks</a> ' +
+                'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ',
+            id: 'mapbox.streets'
+        }).addTo(mymap);
+
+        let myMarker = L.marker([marker_x.value, marker_y.value], {draggable: true}).addTo(mymap)
+            .bindPopup("" +
+                "<b>" + marker_title.value + "</b>" +
+                "<br />Marker Description.<br />'This will be updated after you save changes.'").openPopup();
+
+        function onMapZoom(e) {
+            current_zoom_level.value = mymap.getZoom();
+        }
+
+        function onMapMove(e) {
+            center_x.value = mymap.getCenter().lat;
+            center_y.value = mymap.getCenter().lng;
+        }
+
+        function onMarkerMove(e) {
+            marker_x.value = e.latlng.lat;
+            marker_y.value = e.latlng.lng;
+        }
+
+        mymap.on('zoomend', onMapZoom);
+        mymap.on('moveend', onMapMove);
+        myMarker.on('move', onMarkerMove);
+    }
+
+</script>
