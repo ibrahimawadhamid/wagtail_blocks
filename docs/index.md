@@ -23,5 +23,6 @@ or [Maps](https://wagtail-blocks.readthedocs.io/en/latest/showcase/map/)
 > - Cropped Images with Text
 > - List with Images and Links
 > - Thumbnail Gallery
+> - Image Slider
 > - Chart (Bar - Pie - Line - Area - Radar)
 > - Map (Marker with rich text description)

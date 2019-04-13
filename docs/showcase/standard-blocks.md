@@ -25,3 +25,9 @@
 
 ### Thumbnail Gallery
 ![ThumbnailGalleryBlock-view](screenshots/standard-blocks/ThumbnailGalleryBlock-view.PNG)
+---
+
+### Image Slider
+![ImageSliderBlock-view-1](screenshots/standard-blocks/ImageSliderBlock-view-1.PNG)
+
+![ImageSliderBlock-view-1](screenshots/standard-blocks/ImageSliderBlock-view-2.PNG)

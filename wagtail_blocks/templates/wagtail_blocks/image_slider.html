@@ -1,0 +1,27 @@
+{% load wagtailimages_tags %}
+{% load wagtailcore_tags %}
+{% load static from staticfiles %}
+
+<link href="{% static 'wagtail_blocks/bootstrap.min.css' %}?v={{ VERSION }}" rel="stylesheet"/>
+<script src="{% static 'wagtail_blocks/js/bootstrap.bundle.min.js' %}?v={{ VERSION }}"></script>
+<link href="{% static 'wagtail_blocks/image_slider.css' %}?v={{ VERSION }}" rel="stylesheet"/>
+
+
+<div class="container">
+    <div class="row text-center text-lg-left">
+        <div class="wagtail_blocks_accordian">
+            <ul>
+                {% for image_item in value.image_items %}
+                    <li>
+                        <div class="image_title">
+                            <a href="#">{{ image_item.image.file.title }}</a>
+                        </div>
+                        <a href="#">
+                            <img src="{{ image_item.image.file.url }}"/>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

@@ -213,3 +213,20 @@ class MapBlock(blocks.StructBlock):
         form_template = 'wagtail_blocks/admin_blocks/map.html'
         template = 'wagtail_blocks/map.html'
         icon = "fa-globe"
+
+
+class SingleImageSlide(blocks.StructBlock):
+    image = ImageChooserBlock(
+        label='Image',
+    )
+
+
+class ImageSliderBlock(blocks.StructBlock):
+    image_items = blocks.ListBlock(
+        SingleImageSlide(),
+        label="Image",
+    )
+
+    class Meta:
+        template = 'wagtail_blocks/image_slider.html'
+        icon = 'fa-slideshare'

@@ -25,7 +25,7 @@ Add the following enteries to your `settings.py` in the INSTALLED_APPS section:
 ## Sample Usage
 ```python
 from wagtail_blocks.blocks import HeaderBlock, ListBlock, ImageTextOverlayBlock, CroppedImagesWithTextBlock, \
-    ListWithImagesBlock, ThumbnailGalleryBlock, ChartBlock, MapBlock
+    ListWithImagesBlock, ThumbnailGalleryBlock, ChartBlock, MapBlock, ImageSliderBlock
 
 class HomePage(Page):
     body = StreamField([
@@ -37,6 +37,7 @@ class HomePage(Page):
         ('thumbnail_gallery', ThumbnailGalleryBlock()),
         ('chart', ChartBlock()),
         ('map', MapBlock()),
+        ('image_slider', ImageSliderBlock()),
     ], blank=True)
 
     content_panels = Page.content_panels + [
@@ -63,6 +64,7 @@ or [Maps](https://wagtail-blocks.readthedocs.io/en/latest/showcase/map/)
 > - Cropped Images with Text
 > - List with Images and Links
 > - Thumbnail Gallery
+> - Image Slider
 > - Chart (Bar - Pie - Line - Area - Radar)
 > - Map (Marker with rich text description)
 
