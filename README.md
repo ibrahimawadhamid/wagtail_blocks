@@ -1,5 +1,5 @@
 # wagtail_blocks ![wagtail](https://img.shields.io/badge/CMS-Wagtail-green.svg)
-[![PyPI](https://img.shields.io/pypi/v/wagtail-blocks.svg)](https://pypi.python.org/pypi/wagtail-blocks) ![Build](https://travis-ci.org/ibrahimawadhamid/wagtail_blocks.svg?branch=master) ![Build](https://img.shields.io/pypi/status/wagtail-blocks.svg) [![Documentation Status](https://readthedocs.org/projects/wagtail-blocks/badge/?version=latest)](https://wagtail-blocks.readthedocs.io/en/latest/?badge=latest) ![PyPI - License](https://img.shields.io/pypi/l/wagtail-blocks.svg)
+[![PyPI](https://img.shields.io/pypi/v/wagtail-blocks.svg)](https://pypi.python.org/pypi/wagtail-blocks) ![Build](https://img.shields.io/pypi/status/wagtail-blocks.svg) [![Documentation Status](https://readthedocs.org/projects/wagtail-blocks/badge/?version=latest)](https://wagtail-blocks.readthedocs.io/en/latest/?badge=latest) ![PyPI - License](https://img.shields.io/pypi/l/wagtail-blocks.svg)
 
 A Collection of awesome Wagtail CMS stream-field blocks and Charts.
 
@@ -69,8 +69,7 @@ or [Maps](https://wagtail-blocks.readthedocs.io/en/latest/showcase/map/)
 > - Map (Marker with rich text description)
 
 ## Supported Versions
-> - Python 2 & 3
-> - All wagtail versions! (1.x | 2.x)
+> - Python 3.6 and higher
+> - Wagtail 2 and higher
 > - Bootstrap 4
 
-![wagtail](https://img.shields.io/badge/Wagtail-1.x|2.x-green.svg) ![Python](https://img.shields.io/pypi/pyversions/wagtail-blocks.svg) ![Boostrap](https://img.shields.io/badge/Bootstrap-4.3-blue.svg)
