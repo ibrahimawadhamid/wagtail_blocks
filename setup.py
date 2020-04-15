@@ -1,26 +1,17 @@
 import os
 from setuptools import setup, find_packages
 
-try:
-    from pip._internal.req import parse_requirements
-    from pip._internal.download import PipSession
-except ImportError:
-    from pip.req import parse_requirements
-    from pip.download import PipSession
-
-CURRENT_FILE_PATH = os.path.abspath(__file__)
-CURRENT_DIR = os.path.dirname(CURRENT_FILE_PATH)
-session = PipSession()
-with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
-    README = readme.read()
-
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
+with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
+    README = readme.read()
+
 # Package dependencies
-install_reqs = parse_requirements(
-    os.path.join(CURRENT_DIR, "requirements.txt"), session=session)
-reqs = [str(ir.req) for ir in install_reqs]
+install_requires = [
+    "wagtail>=1.5",
+    "wagtailfontawesome>=1.1.4",
+]
 
 # Testing dependencies
 testing_extras = [
@@ -61,7 +52,7 @@ setup(
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
         'Topic :: Software Development',
     ],
-    install_requires=reqs,
+    install_requires=install_requires,
     extras_require={
         'testing': testing_extras,
         'docs': documentation_extras
