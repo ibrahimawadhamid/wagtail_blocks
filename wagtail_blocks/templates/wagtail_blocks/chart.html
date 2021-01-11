@@ -14,6 +14,7 @@
 </div>
 
 <script>
+window.addEventListener("load",function(){
     const chart_type = '{{value.chart_type}}';
     let color_order = getRandomInt(6);
     const colors = [
@@ -79,6 +80,6 @@
             }]
         }
     }
-    })
-    ;
+    });
+})
 </script>
