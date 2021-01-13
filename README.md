@@ -1,5 +1,6 @@
 # wagtail_blocks ![wagtail](https://img.shields.io/badge/CMS-Wagtail-green.svg)
 [![PyPI](https://img.shields.io/pypi/v/wagtail-blocks.svg)](https://pypi.python.org/pypi/wagtail-blocks) ![Build](https://img.shields.io/pypi/status/wagtail-blocks.svg) [![Documentation Status](https://readthedocs.org/projects/wagtail-blocks/badge/?version=latest)](https://wagtail-blocks.readthedocs.io/en/latest/?badge=latest) ![PyPI - License](https://img.shields.io/pypi/l/wagtail-blocks.svg)
+![Downloads](https://static.pepy.tech/badge/wagtail-blocks) ![Downloads Month](https://static.pepy.tech/badge/wagtail-blocks/month) ![Downloads Week](https://static.pepy.tech/badge/wagtail-blocks/week)
 
 A Collection of awesome Wagtail CMS stream-field blocks and Charts.
 
