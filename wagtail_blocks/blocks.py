@@ -1,18 +1,13 @@
 import json
 
 from django import forms
+from wagtail import VERSION as WAGTAIL_VERSION
+from wagtail.images.blocks import ImageChooserBlock
 
-try:
-    from wagtail.wagtailcore import blocks
-    from wagtail.wagtailimages.blocks import ImageChooserBlock
-
-    wagtail_version = 1
-
-except ImportError:
+if WAGTAIL_VERSION >= (3, 0):
+    from wagtail import blocks
+else:
     from wagtail.core import blocks
-    from wagtail.images.blocks import ImageChooserBlock
-
-    wagtail_version = 2
 
 
 class HeaderChoiceBlock(blocks.ChoiceBlock):
