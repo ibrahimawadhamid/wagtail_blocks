@@ -1,2 +1,2 @@
-wagtail>=2.8.1
+wagtail>=2.15
 wagtailfontawesome>=1.1.4
