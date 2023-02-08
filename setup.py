@@ -9,7 +9,7 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
 
 # Package dependencies
 install_requires = [
-    "wagtail>=2.15",
+    "wagtail>=4.1",
     "wagtailfontawesome>=1.1.4",
 ]
 
@@ -39,8 +39,6 @@ setup(
         'Environment :: Web Environment',
         'Framework :: Django',
         'Framework :: Wagtail',
-        'Framework :: Wagtail :: 2',
-        'Framework :: Wagtail :: 3',
         'Framework :: Wagtail :: 4',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',

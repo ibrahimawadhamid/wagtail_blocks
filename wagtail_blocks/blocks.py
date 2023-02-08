@@ -1,13 +1,9 @@
 import json
 
 from django import forms
-from wagtail import VERSION as WAGTAIL_VERSION
 from wagtail.images.blocks import ImageChooserBlock
 
-if WAGTAIL_VERSION >= (3, 0):
-    from wagtail import blocks
-else:
-    from wagtail.core import blocks
+from wagtail import blocks
 
 
 class HeaderChoiceBlock(blocks.ChoiceBlock):
