@@ -53,7 +53,7 @@ class ImageTextOverlayBlock(blocks.StructBlock):
 
     class Meta:
         template = 'wagtail_blocks/image_text_overlay.html'
-        icon = 'fa-image'
+        icon = 'image'
 
 
 class SingleImageWithText(blocks.StructBlock):
@@ -74,7 +74,7 @@ class CroppedImagesWithTextBlock(blocks.StructBlock):
 
     class Meta:
         template = 'wagtail_blocks/cropped_images_with_text.html'
-        icon = 'fa-camera-retro'
+        icon = 'camera-retro'
 
 
 class SingleListImage(blocks.StructBlock):
@@ -109,7 +109,7 @@ class ListWithImagesBlock(blocks.StructBlock):
 
     class Meta:
         template = 'wagtail_blocks/list_with_images.html'
-        icon = 'fa-id-card-o'
+        icon = 'id-card-alt'
 
 
 class SingleThumbnail(blocks.StructBlock):
@@ -126,7 +126,7 @@ class ThumbnailGalleryBlock(blocks.StructBlock):
 
     class Meta:
         template = 'wagtail_blocks/thumbnail_gallery.html'
-        icon = 'fa-object-ungroup'
+        icon = 'object-ungroup'
 
 
 class ChartChoiceBlock(blocks.ChoiceBlock):
@@ -180,7 +180,7 @@ class ChartBlock(blocks.StructBlock):
 
     class Meta:
         template = 'wagtail_blocks/chart.html'
-        icon = 'fa-bar-chart'
+        icon = 'chart-bar'
 
 
 class MapBlock(blocks.StructBlock):
@@ -203,7 +203,7 @@ class MapBlock(blocks.StructBlock):
     class Meta:
         form_template = 'wagtail_blocks/admin_blocks/map.html'
         template = 'wagtail_blocks/map.html'
-        icon = "fa-globe"
+        icon = "globe"
 
 
 class SingleImageSlide(blocks.StructBlock):
@@ -220,4 +220,4 @@ class ImageSliderBlock(blocks.StructBlock):
 
     class Meta:
         template = 'wagtail_blocks/image_slider.html'
-        icon = 'fa-slideshare'
+        icon = 'sliders-h'
