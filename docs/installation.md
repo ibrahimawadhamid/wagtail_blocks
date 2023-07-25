@@ -1,9 +1,13 @@
 # Installation
-1- Install the package using pip:
-```python
+
+1. Install the package using pip:
+
+```bash
 pip install wagtail_blocks
 ```
-2- Add the following enteries to your settings.py in the INSTALLED_APPS section:
+
+1. Add the following enteries to your settings.py in the INSTALLED_APPS section:
+
 ```python
 'wagtailfontawesome',
 'wagtail_blocks',
