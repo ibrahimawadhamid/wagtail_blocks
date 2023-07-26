@@ -9,6 +9,6 @@ pip install wagtail_blocks
 1. Add the following enteries to your settings.py in the INSTALLED_APPS section:
 
 ```python
-'wagtailfontawesome',
+'wagtailfontawesomesvg',
 'wagtail_blocks',
 ```
