@@ -1,41 +1,49 @@
-All Charts support multiple datasets!
+# All Charts support multiple datasets!
 
-### Bar Chart
+## Bar Chart
+
 ![bar](screenshots/advanced-blocks/chart/bar.PNG)
 
 ---
 
-### Line Chart
+## Line Chart
+
 ![line](screenshots/advanced-blocks/chart/line.PNG)
 
 ---
 
-### Pie Chart
+## Pie Chart
+
 ![bar](screenshots/advanced-blocks/chart/pie.PNG)
 
 ---
 
-### Radar Chart
+## Radar Chart
+
 ![bar](screenshots/advanced-blocks/chart/radar.PNG)
 
 ---
 
-### Polar Area Chart
+## Polar Area Chart
+
 ![bar](screenshots/advanced-blocks/chart/polar-area.PNG)
 
 ---
 
-### Doughnut Chart
+## Doughnut Chart
+
 ![bar](screenshots/advanced-blocks/chart/doughnut.PNG)
 
 ---
 
-### Horizontal Chart
+## Horizontal Chart
+
 ![bar](screenshots/advanced-blocks/chart/horizontal-bar.PNG)
 
 ---
 
-### Multiple Datasets
+## Multiple Datasets
+
 support for all chart types not only bar!
 ![bar](screenshots/advanced-blocks/chart/multiple-datasets.PNG)
 
