@@ -86,5 +86,5 @@ Check Showcase for [Standard Blocks](docs/showcase/standard-blocks.md) or [Chart
 ## Supported Versions
 
 - Python 3.8 and higher
-- Wagtail 4.1 and higher
+- Wagtail > 4.1 and < 6.0
 - Bootstrap 4
