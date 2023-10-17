@@ -9,7 +9,7 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
 
 # Package dependencies
 install_requires = [
-    "wagtail>=4.1,<6.0",
+    "wagtail>=4.1",
     "wagtail-font-awesome-svg"
 ]
 
