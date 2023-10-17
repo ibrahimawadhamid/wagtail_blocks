@@ -109,7 +109,7 @@ class ListWithImagesBlock(blocks.StructBlock):
 
     class Meta:
         template = 'wagtail_blocks/list_with_images.html'
-        icon = 'id-card-alt'
+        icon = 'id-card-clip'
 
 
 class SingleThumbnail(blocks.StructBlock):
@@ -180,7 +180,7 @@ class ChartBlock(blocks.StructBlock):
 
     class Meta:
         template = 'wagtail_blocks/chart.html'
-        icon = 'chart-bar'
+        icon = 'chart-column'
 
 
 class MapBlock(blocks.StructBlock):
@@ -220,4 +220,4 @@ class ImageSliderBlock(blocks.StructBlock):
 
     class Meta:
         template = 'wagtail_blocks/image_slider.html'
-        icon = 'sliders-h'
+        icon = 'sliders'
